@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: black-market
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: "5000"
